@@ -1,0 +1,7 @@
+# Explanation of all rules:
+# http://mozilla.github.io/addons-linter/
+
+# Issues come from imported libraries and should be fine.
+# Setting innerHTML in rester-dom-purify-frame.html should be fine because HTML
+# is sanitized with DOMPurify.
+site/scripts/bundle.js UNSAFE_VAR_ASSIGNMENT

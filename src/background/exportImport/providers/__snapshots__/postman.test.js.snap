@@ -1,0 +1,252 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`format adds history entries as responses to matching request 1`] = `
+{
+  "content": "{
+    "info": {
+        "name": "RESTer",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "A",
+            "item": [
+                {
+                    "request": {
+                        "url": "https://example.com",
+                        "method": "GET",
+                        "header": []
+                    },
+                    "id": "rester-1",
+                    "name": "Number 1",
+                    "response": [
+                        {
+                            "id": "rester-1",
+                            "name": "100 To-do: come up with name",
+                            "originalRequest": {
+                                "url": "https://example.com",
+                                "method": "GET",
+                                "header": []
+                            },
+                            "responseTime": 20,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "text/html"
+                                }
+                            ],
+                            "body": "<!DOCTYPE html>\\n<html>\\n</html>\\n",
+                            "status": "OK",
+                            "code": 200
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "B",
+            "item": [
+                {
+                    "request": {
+                        "url": "https://example.com",
+                        "method": "POST",
+                        "header": []
+                    },
+                    "id": "rester-2",
+                    "name": "Number 2"
+                }
+            ]
+        },
+        {
+            "name": "History_<random>",
+            "item": [
+                {
+                    "request": {
+                        "url": "https://example.com",
+                        "method": "GET",
+                        "header": []
+                    },
+                    "id": "rester-history-0",
+                    "name": "History_<random> 0",
+                    "response": [
+                        {
+                            "id": "rester-2",
+                            "name": "100 History_<random> 0",
+                            "originalRequest": {
+                                "url": "https://example.com",
+                                "method": "GET",
+                                "header": []
+                            },
+                            "responseTime": 20,
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "text/html"
+                                }
+                            ],
+                            "body": "<!DOCTYPE html>\\n<html>\\n</html>\\n",
+                            "status": "OK",
+                            "code": 200
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}",
+  "contentType": "application/json",
+  "suffix": "json",
+}
+`;
+
+exports[`format creates nested folder structure for requests 1`] = `
+{
+  "content": "{
+    "info": {
+        "name": "RESTer",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "A",
+            "item": [
+                {
+                    "name": "B",
+                    "item": [
+                        {
+                            "name": "C",
+                            "item": [
+                                {
+                                    "request": {
+                                        "url": "https://example.com",
+                                        "method": "GET",
+                                        "header": []
+                                    },
+                                    "id": "rester-1",
+                                    "name": "Number 1"
+                                },
+                                {
+                                    "request": {
+                                        "url": "https://example.com",
+                                        "method": "POST",
+                                        "header": [
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            }
+                                        ],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\\"foo\\": \\"bar\\"}"
+                                        }
+                                    },
+                                    "id": "rester-2",
+                                    "name": "Number 2"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}",
+  "contentType": "application/json",
+  "suffix": "json",
+}
+`;
+
+exports[`format request with same name as collection 1`] = `
+{
+  "content": "{
+    "info": {
+        "name": "RESTer",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "A",
+            "item": [
+                {
+                    "name": "B",
+                    "item": [
+                        {
+                            "request": {
+                                "url": "https://www.example.com",
+                                "method": "GET",
+                                "header": []
+                            },
+                            "id": "rester-1",
+                            "name": "C"
+                        }
+                    ]
+                },
+                {
+                    "request": {
+                        "url": "https://www.example.com",
+                        "method": "GET",
+                        "header": []
+                    },
+                    "id": "rester-2",
+                    "name": "B"
+                }
+            ]
+        }
+    ]
+}",
+  "contentType": "application/json",
+  "suffix": "json",
+}
+`;
+
+exports[`parse parses nested folders and rester ids 1`] = `
+{
+  "data": {
+    "requests": [
+      Request {
+        "body": "fruit=banana",
+        "collection": "Import / A / B",
+        "headers": [],
+        "method": "POST",
+        "title": "Food",
+        "url": "https://example.com",
+        "variables": {},
+      },
+    ],
+  },
+  "supported": true,
+}
+`;
+
+exports[`parse parses part of Postman Echo collection 1`] = `
+{
+  "data": {
+    "requests": [
+      Request {
+        "body": "code=xWnkliVQJURqB2x1&grant_type=authorization_code&redirect_uri=https%3A%2F%2Fwww.getpostman.com%2Foauth2%2Fcallback&client_id=abc123&client_secret=ssh-secret",
+        "collection": "Auth: Digest",
+        "headers": [],
+        "method": "GET",
+        "title": "DigestAuth Request",
+        "url": "https://postman-echo.com/digest-auth",
+        "variables": {},
+      },
+      Request {
+        "body": null,
+        "collection": "Auth: Digest",
+        "headers": [
+          {
+            "name": "Authorization",
+            "value": "Digest username="postman", realm="Users", nonce="ni1LiL0O37PRRhofWdCLmwFsnEtH1lew", uri="/digest-auth", response="254679099562cf07df9b6f5d8d15db44", opaque=""",
+          },
+        ],
+        "method": "GET",
+        "title": "DigestAuth Success",
+        "url": "https://postman-echo.com/digest-auth",
+        "variables": {},
+      },
+    ],
+  },
+  "supported": true,
+}
+`;
