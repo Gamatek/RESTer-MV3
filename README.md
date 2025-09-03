@@ -2,8 +2,6 @@
 
 A REST client for almost any web service.
 
-Download for: [Firefox](https://addons.mozilla.org/firefox/addon/rester) | [Chrome](https://chrome.google.com/webstore/detail/rester/eejfoncpjfgmeleakejdcanedmefagga)
-
 ![](docs/preview.png)
 
 You can...
@@ -54,11 +52,11 @@ To load the add-on in the browser:
 To create packages for AMO and the Chrome Web Store run:
 
 ```command
-yarn build
-yarn lint
-yarn test
-yarn test:e2e
-yarn package
+npm build
+npm lint
+npm test
+npm test:e2e
+npm package
 ```
 
 Afterwards you will find the generated files in the folder _package_.
