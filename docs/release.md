@@ -23,7 +23,7 @@ To release a new version of RESTer:
 1. Build the extension and update library-links.md
 
     ```sh
-    yarn build
+    npm run dev build
     mv docs/library-links.md.new docs/library-links.md
     ```
 
@@ -46,8 +46,8 @@ To release a new version of RESTer:
 1. Create packages
 
     ```sh
-    yarn build
-    yarn package
+    npm run build
+    npm run package
     git archive -o package/RESTer-$VERSION.zip $VERSION
     ```
 

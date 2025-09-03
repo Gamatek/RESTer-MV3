@@ -27,12 +27,11 @@ It requires a few permissions to do this. [Which permissions and why?](./docs/pe
 The project requires:
 
 -   `node` >= 20
--   `yarn` >= 1
 
 Install all other dependencies with the command:
 
 ```command
-yarn install
+npm install
 ```
 
 ### Run locally
@@ -40,7 +39,7 @@ yarn install
 To build the add-on run:
 
 ```command
-yarn start
+npm start
 ```
 
 This will generate a working add-on in the folder _build_. It will also watch files for changes and update the folder accordingly.

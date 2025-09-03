@@ -4,7 +4,7 @@ As stated in the post [Improving Review Time by Providing Links to Third Party S
 
 Update this file with all changes to used third party libraries (add/remove dependency, change version). Use the helper, which is automatically executed on every build:
 
-    yarn build
+    npm run build
 
 ```
 @polymer/app-layout 3.1.0
