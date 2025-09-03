@@ -13,49 +13,49 @@ const additionalManifestEntries = {
         applications: {
             gecko: {
                 id: 'rester@kuehle.me',
-                strict_min_version: '63.0',
+                strict_min_version: '109.0',
             },
         },
         icons: {
-            48: 'images/icon48.png',
-            96: 'images/icon96.png',
+            48: 'images/icon-dev48.png',
+            96: 'images/icon-dev96.png',
         },
         browser_action: {
             default_icon: {
-                16: 'images/icon16.png',
-                24: 'images/icon24.png',
-                32: 'images/icon32.png',
+                16: 'images/icon-dev16.png',
+                24: 'images/icon-dev24.png',
+                32: 'images/icon-dev32.png',
             },
             theme_icons: [
                 {
-                    dark: 'images/icon16.png',
-                    light: 'images/icon-light16.png',
+                    dark: 'images/icon-dev16.png',
+                    light: 'images/icon-light-dev16.png',
                     size: 16,
                 },
                 {
-                    dark: 'images/icon24.png',
-                    light: 'images/icon-light24.png',
+                    dark: 'images/icon-dev24.png',
+                    light: 'images/icon-light-dev24.png',
                     size: 24,
                 },
                 {
-                    dark: 'images/icon32.png',
-                    light: 'images/icon-light32.png',
+                    dark: 'images/icon-dev32.png',
+                    light: 'images/icon-light-dev32.png',
                     size: 32,
                 },
             ],
         },
     },
     chrome: {
-        minimum_chrome_version: '67',
+        minimum_chrome_version: '88',
         icons: {
-            48: 'images/icon48.png',
-            128: 'images/icon128.png',
+            48: 'images/icon-dev48.png',
+            128: 'images/icon-dev128.png',
         },
         browser_action: {
             default_icon: {
-                16: 'images/icon16.png',
-                24: 'images/icon24.png',
-                32: 'images/icon32.png',
+                16: 'images/icon-dev16.png',
+                24: 'images/icon-dev24.png',
+                32: 'images/icon-dev32.png',
             },
         },
     },
@@ -63,10 +63,10 @@ const additionalManifestEntries = {
 
 const usedImages = {
     firefox: [
-        'images/icon{16,24,32,48,96}.png',
-        'images/icon-light{16,24,32,48,96}.png',
+        'images/icon-dev{16,24,32,48,96}.png',
+        'images/icon-light-dev{16,24,32,48,96}.png',
     ],
-    chrome: ['images/icon{16,24,32,48,128}.png'],
+    chrome: ['images/icon-dev{16,24,32,48,128}.png'],
 };
 
 function enhanceManifestJson(manifestJson, browser) {
